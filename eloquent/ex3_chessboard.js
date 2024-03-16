@@ -23,6 +23,9 @@ outputting a grid of the given width and height.
 
 */
 
+
+
+
 for (var string = "",  gap_first = true, n = 0; string.length < 72; ) {
     if (string.length == 8) { // add first newline character
         string += '\n';
@@ -48,6 +51,8 @@ for (var string = "",  gap_first = true, n = 0; string.length < 72; ) {
 
 console.log(string);
 
+// NOTE:
+// NOT YET WORKING FOR ODD NUMBERED SIZES
 
 /*
 // ================================================================ //
