@@ -68,11 +68,11 @@ function prepend(element, list) { /* return a new list with element at the front
 }
 
 prependResult = prepend(4590, listResult);
-console.log(JSON.stringify(prependResult));  /* to log result of conversion properly convert it to JSON */
+console.log(JSON.stringify(prependResult));  // to log result of conversion properly convert it to JSON 
 
-function nth(list, position) { /* return the element at the given position in the list 
-                                  or undefined when there is no such element 
-                               */
+
+function nth(list, position) { 
+    /* return the element at the given position in the list or undefined when there is no such element */
 
     let count = 0;
     while (list) {
@@ -93,7 +93,6 @@ console.log("iterative Nth", nth(prependResult, 9));
 
 /*
 If you haven’t already, also write a recursive version of `nth`.
-
 */
 
 function recursiveNth(list, position) { /* recursive version of nth */
@@ -110,10 +109,8 @@ console.log("recursive Nth", recursiveNth(prependResult, 9));
 // --> undefined
 
 
-
-
 /* For fun and extra practice, tried my hands at a recursive version to arrayToList */
-function recursiveArrayToList(array) { /* recursive version of arrayToList */
+function recursiveArrayToList(array) {  /* recursive version of arrayToList */
     if (currentFirst = array.shift()) { /* get current first element of array */
         rest = {
             value: currentFirst,
@@ -133,27 +130,27 @@ console.log("recursive to List", JSON.stringify(recursiveToList));
 
 // spread out to read better:
 // {
-//     "value": 1,
+// "value": 1,
+// "rest":  {
+//     "value": 2,
 //     "rest":  {
-//           "value": 2,
-//           "rest":  {
-//               "value": 3,
-//               "rest":  {
-//                   "value": 5,
-//                   "rest":  {
-//                       "value": 67,
-//                       "rest":  {
-//                           "value": 54,
-//                           "rest":  {
-//                               "value": -34,
-//                               "rest":  {
-//                                   "value": 546,
-//                                   "rest":  null
-//                             }
-//                         }
-//                     }
+//         "value": 3,
+//         "rest":  {
+//             "value": 5,
+//             "rest":  {
+//                 "value": 67,
+//                 "rest":  {
+//                     "value": 54,
+//                     "rest":  {
+//                         "value": -34,
+//                         "rest":  {
+//                             "value": 546,
+//                             "rest":  null
+//                            }
+//                        }
+//                    }
 //                 }
 //             }
-//         }
-//     }
+//        }
+//    }
 // }
