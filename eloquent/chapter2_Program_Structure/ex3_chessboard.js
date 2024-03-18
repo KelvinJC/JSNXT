@@ -26,30 +26,30 @@ outputting a grid of the given width and height.
 
 
 
-for (var string = "",  gap_first = true, n = 0; string.length < 72; ) {
-    if (string.length == 8) { // add first newline character
-        string += '\n';
-        gap_first = !gap_first;
-        n += 1; 
-    }
-    else if (string.length % 9 != 0 && (string.length - n) % 8 == 0) { // add subsequent newline characters
-        string += '\n';
-        gap_first = !gap_first;
-        n += 1; 
-    }
-    else { // fill grid 
-        if (gap_first == true) {
-            string += "_";
-            string += "#";
-        }
-        else {
-            string += "#";
-            string += "_";
-        }
-    }
-}
+// for (var string = "",  gap_first = true, n = 0; string.length < 72; ) {
+//     if (string.length == 8) { // add first newline character
+//         string += '\n';
+//         gap_first = !gap_first;
+//         n += 1; 
+//     }
+//     else if (string.length % 9 != 0 && (string.length - n) % 8 == 0) { // add subsequent newline characters
+//         string += '\n';
+//         gap_first = !gap_first;
+//         n += 1; 
+//     }
+//     else { // fill grid 
+//         if (gap_first == true) {
+//             string += "_";
+//             string += "#";
+//         }
+//         else {
+//             string += "#";
+//             string += "_";
+//         }
+//     }
+// }
 
-console.log(string);
+// console.log(string);
 
 // NOTE:
 // NOT YET WORKING FOR ODD NUMBERED SIZES
@@ -94,8 +94,7 @@ console.log(string);
 */
 
 
-
-/* 
+ 
 // ================================================= //
 // =====   Optimisation to recieve input    ======   //
 // ================================================= //
@@ -153,7 +152,7 @@ function print_chessboard(size) {
 }
 // ================================================= //
 
-*/
+
 
 
 
