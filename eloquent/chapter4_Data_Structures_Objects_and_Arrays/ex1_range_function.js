@@ -4,11 +4,11 @@ an array containing all the numbers from start up to (and including) end.
 */
 
 function range(start, end) {
-    let rangeArray = [];
+    let array = [];
     for (; start <= end; start++) {
-        rangeArray.push(start);
+        array.push(start);
     }
-    return rangeArray;
+    return array;
 }
 
 console.log(range(4, 25));
