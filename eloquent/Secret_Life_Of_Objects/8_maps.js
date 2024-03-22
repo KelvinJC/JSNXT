@@ -11,6 +11,8 @@ let ages = {
     Julia: 62
 }
 
+console.log("\nObject as Map");
+console.log("---------------------------------")
 console.log(`Julia is ${ages["Julia"]}`);
 // -> Julia is 62
 console.log("Is Jack's age known?", "Jack" in ages);
@@ -39,9 +41,31 @@ protolessAges.Liang = 22
 protolessAges.Julia = 62
 protolessAges.addAges = function() {return this.Boris + this.Julia + this.Liang;}
 
+console.log("\nObject without prototype as Map");
+console.log("---------------------------------")
 console.log(`Julia is ${protolessAges["Julia"]}`);
 console.log("Is Jack's age known?", "Jack" in protolessAges);
 console.log("Is Boris's age known?", "Boris" in protolessAges);
 console.log("Is toString's age known?", "toString" in protolessAges); 
 console.log(protolessAges.addAges());
 
+/*
+Object property names must be strings. 
+If you need a map whose keys can’t easily be converted to strings —
+such as objects — you cannot use an object as your map.
+
+Fortunately, JavaScript comes with a class called Map that is written for this exact purpose. 
+It stores a mapping and allows any type of keys.
+*/
+
+let ages_ = new Map();
+
+ages_.set("Boris", 39);
+ages_.set("Liang", 22);
+ages_.set("Julia", 62);
+
+console.log("\nProper Map");
+console.log("---------------------------------")
+console.log(`Julia is ${ages_.get("Julia")}`);
+console.log("Is Jack's age known?", ages_.has("Jack"));
+console.log("Is toString's age known?", ages_.has("toString"));
