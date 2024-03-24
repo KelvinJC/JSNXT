@@ -14,4 +14,4 @@ function routeRobot(state, memory) {
     return {direction: memory[0], memory: memory.slice(1)}
 }
 
-runRobot(VillageState.random(), routeRobot, []); // test with routeRobot
+runRobot(VillageState.random(), routeRobot, []); // test routeRobot
