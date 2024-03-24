@@ -1,4 +1,6 @@
 import { runRobot } from "./run_robot.js";
+import VillageState from "./village_state.js";
+
 
 const mailRoute = [
     "Alice's House", "Cabin", "Alice's House", 
