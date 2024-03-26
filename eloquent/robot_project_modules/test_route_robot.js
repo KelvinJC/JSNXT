@@ -9,11 +9,11 @@ const mailRoute = [
     "Grete's House",  "Farm", "Marketplace",  "Post Office"
 ];
 
-function routeRobot(state, memory) {
+export function routeRobot(state, memory) {
     if (memory.length == 0) {
         memory = mailRoute;
     }
     return {direction: memory[0], memory: memory.slice(1)}
 }
 
-runRobot(VillageState.random(), routeRobot, []); // test routeRobot
+//runRobot(VillageState.random(), routeRobot, []); // test routeRobot

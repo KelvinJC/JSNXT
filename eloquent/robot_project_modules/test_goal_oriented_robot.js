@@ -58,7 +58,7 @@ function findRoute(graph, from, to) {
     }
 }
 
-function goalOrientedRobot({place, parcels}, route) {
+export function goalOrientedRobot({place, parcels}, route) {
     if (route.length == 0) {
         let parcel = parcels[0];
         if (parcel.place != place) {
@@ -70,4 +70,4 @@ function goalOrientedRobot({place, parcels}, route) {
     return {direction: route[0], memory: route.slice(1)};
 }
 
-runRobot(VillageState.random(), goalOrientedRobot, []);
+//runRobot(VillageState.random(), goalOrientedRobot, []);
