@@ -49,14 +49,18 @@ function findRoute(graph, from, to) {
     for (let i = 0; i < work.length; i++) {
         let {at, route} = work[i];
         
-        for (let place of graph[at]) {
-            if (place == to) return route.concat(place);
+        for (let place of graph[at]) { // [ "Alice's House", 'Marketplace' ]
+            if (place == to) {
+                // console.log("work", work);
+                return route.concat(place)
+            };
             if (!work.some(w => w.at == place)) {
-                work.push({at: place, route: route.concat(place)});
+                work.push({at: place, route: route.concat(place)}); // {at: "Alice's House", route: ["Alice's House"]}
             }
         }
     }
 }
+
 
 export function goalOrientedRobot({place, parcels}, route) {
     if (route.length == 0) {
@@ -67,7 +71,10 @@ export function goalOrientedRobot({place, parcels}, route) {
             route = findRoute(roadGraph, place, parcel.address);
         }
     }
+    console.log("route -->", route)
     return {direction: route[0], memory: route.slice(1)};
 }
 
-//runRobot(VillageState.random(), goalOrientedRobot, []);
+let state = VillageState.random();
+console.log(state);
+runRobot(state, goalOrientedRobot, []);
