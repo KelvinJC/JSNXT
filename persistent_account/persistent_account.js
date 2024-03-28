@@ -98,14 +98,6 @@ const accounts = {
     levo: levo
 };
 
-// console.log("tunde before deposit", accounts.tunde.statement);
-// accounts.tunde = accounts.tunde.deposit(1000);
-// console.log("tunde before transfer", accounts.tunde.statement);
-// console.log("levo before transfer", accounts.levo.statement);
-// transfer(accounts.tunde, 45, accounts.levo);
-// console.log("tunde after transfer", accounts.tunde.statement);
-// console.log("levo after transfer", accounts.levo.statement);
-
 console.log("check object", accounts.tunde.toString());
 
 console.log("tunde before deposit", accounts.tunde.statement);
